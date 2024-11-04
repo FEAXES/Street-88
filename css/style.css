@@ -1,0 +1,447 @@
+@import url(./font.css);
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: "Raleway";
+    background: #0C0C0C;
+}
+
+a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul 
+{
+    list-style: none;
+}
+
+.container 
+{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.line
+{
+    width: 100%;
+    height: 1px;
+    background: #7D7373;
+}
+
+.header
+{
+    color: #fff;
+    background: #0C0C0C;
+}
+
+.header__top
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    padding: 18px 15px;
+}
+
+.links
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ship
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo
+{
+    max-width: 216px;
+    max-height: 53px;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    padding: 4px 4px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 36px;
+    background: #06600F;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.logo__name
+{
+    padding: 0px 18px;
+    background: #0A9418;
+}
+
+.nav__burger 
+{
+    border: none;
+    outline: none;
+    background: #0A9418;
+    color: #fff;
+    padding: 15px;
+    font-size: 15px;
+    display: none;
+}
+
+.menu
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.menu__link
+{
+    padding: 22px 12px;
+    display: block;
+    transition: 500ms;
+}
+
+.menu__link:hover
+{
+    background: rgba(106, 207, 23, 0.75);
+}
+
+.header__menu
+{
+    background: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+
+.header__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 167px;
+    padding-bottom: 179px;
+}
+
+.header__title
+{
+    font-weight: 900;
+    font-size: 72px;
+    color: #69CF17;
+    padding-bottom: 18px;
+}
+
+.header__spec
+{
+    font-size: 36px;
+    color: #69CF17;
+    padding-bottom: 18px;
+}
+
+.header__desc
+{
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+.header__buttons
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__price
+{
+    padding: 33px 76px;
+    font-weight: 100;
+    font-size: 50px;
+    background-color: #69CF17;
+}
+
+.header__watch
+{
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 15px 70px;
+    margin: 37px 0px;
+    background-color: #69CF17;
+}
+
+.main
+{
+    margin-top: 48px;
+    background: #0C0C0C;
+}
+
+.burger__list
+{
+    background: #292929;
+    max-height: 107px;
+    
+}
+
+.product__menu
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    padding: 20px 20px;
+}
+
+.main__link
+{
+    background: #292929;
+    padding: 20px 20px;
+    color: #FFFFFF;
+    transition: 0.5s;
+    position: relative;
+}
+
+.main__link::after 
+{
+    content: '';
+    background: #FFFFFF;
+    width: 0;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 10px 10px 0 0;
+    transition: 0.5s;
+}
+
+.main__link:hover::after 
+{
+    width: 100%;
+    left: 0;
+}
+
+.main__list
+{
+    background: #393636;
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 30px), 1fr));
+}
+
+.burger__card
+{
+    padding: 15px;
+    background: #0C0C0C;
+    border: 1px solid white;
+    border-radius: 1%;
+    position: relative;
+    overflow: hidden;
+}
+
+.burger__img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.burger__img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.burger__img-overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 207, 23, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.burger__img-container:hover .burger__img-overlay 
+{
+    opacity: 1;
+}
+
+.burger__img-overlay svg {
+    width: 62px; 
+    height: 60px;
+}
+
+.burger__title
+{
+    font-size: 18px;
+    font-family: "Raleway";
+    font-weight: 700;
+}
+
+.burger__desc
+{
+    font-size: 18px;
+    font-family: "Raleway";
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.main__map
+{
+    margin-top: 50px
+}
+
+.map__title
+{
+    width: 100%;
+    color: #69CF17;
+    background: #fff;
+    text-align: center;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 50px;
+    padding: 20px 0px;
+}
+
+.map__img
+{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+
+.footer__top
+{
+    padding: 0px 245px;
+    background: linear-gradient(rgb(0, 0, 0), rgba(106, 207, 23, 0.5));;
+}
+
+.top__footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.phone__number
+{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Roboto";
+    color: #fff;
+}
+
+.menu__footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: #fff;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 80px;
+}
+
+.footer__bottom
+{
+    background: #1A3406;
+}
+
+.bot__text
+{
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 16px;
+    padding: 19px 0px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.about__main
+{
+    padding: 30px 405px;
+}
+
+.about__title {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.about__img {
+    position: relative;
+    width: 100%;
+}
+
+.about__img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 12, 12, 0.44);
+    z-index: 1;
+}
+
+.about__text
+{
+    position: absolute;
+    font-size: 55px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(106, 207, 23, 0.7);
+    z-index: 2;
+}
+
+.about__desc
+{
+    font-family: "Raleway";
+    font-weight: 700;
+    color: #fff;
+    font-size: 18px;
+    line-height: 55px;
+    text-align: justify;
+}
